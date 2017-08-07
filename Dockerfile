@@ -5,8 +5,6 @@ WORKDIR /data
 ADD "https://github.com/OwnageTechGeek/docker-paper/raw/master/spigot.jar" /srv/paper.jar
 RUN cd /srv &&\
 	java -jar paper.jar --version &&\
-	mv cache/patched*.jar paper.jar &&\
-	rm -rf cache &&\
 	chmod 444 /srv/paper.jar
 
 ADD start.sh /usr/local/bin/paper
