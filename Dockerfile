@@ -1,7 +1,5 @@
 FROM java:8-alpine
 
-ARG MINECRAFT_VERSION=1.12
-ARG PAPER_BUILD=1142
 
 WORKDIR /data
 ADD "./paper.jar" /srv/paper.jar
