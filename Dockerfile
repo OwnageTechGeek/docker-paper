@@ -2,7 +2,7 @@ FROM java:8-alpine
 
 
 WORKDIR /data
-ADD "./paper.jar" /srv/paper.jar
+ADD "https://github.com/OwnageTechGeek/docker-paper/raw/master/spigot.jar" /srv/paper.jar
 RUN cd /srv &&\
 	java -jar paper.jar --version &&\
 	mv cache/patched*.jar paper.jar &&\
